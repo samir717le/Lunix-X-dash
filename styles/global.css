@@ -1,0 +1,114 @@
+/* Reset any margin or padding that might interfere */
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Translucent Title Bar */
+.title-bar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 1rem;
+  z-index: 1000;
+}
+
+.title-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title-content h1 {
+  margin: 0;
+}
+
+/* Nav section for buttons */
+.title-content nav {
+  display: flex;
+  justify-content: flex-start; /* Aligns buttons to the left */
+  align-items: left;
+  gap: 1rem; /* Space between buttons */
+}
+
+/* Button Styles */
+.title-content nav button {
+  display: inline-block;
+  padding: 15px 30px;
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 1px;
+  color: #725AC1;
+  background: transparent;
+  cursor: pointer;
+  transition: ease-out 0.5s;
+  border: 2px solid #725AC1;
+  border-radius: 10px;
+  box-shadow: inset 0 0 0 0 #725AC1;
+}
+
+.title-content nav button:hover {
+  color: white;
+  box-shadow: inset 0 -100px 0 0 #725AC1;
+}
+
+.title-content nav button:active {
+  transform: scale(0.9);
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background: url('../images/background.png') no-repeat center center;
+  background-size: cover;
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.hero-content {
+  max-width: 600px;
+  text-align: center;
+  color: white;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  color: white;
+  background-color: #007bff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.features {
+  padding: 2rem;
+  background-color: #fff;
+}
+
+.feature {
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content {
+    padding: 1rem;
+  }
+}
